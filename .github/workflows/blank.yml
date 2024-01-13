@@ -14,7 +14,7 @@ on:
         loop_count:
           required: true
           description: enter loop count
-          default: '10'
+          default: '5'
 
 jobs:
     run_jmeter_test:
@@ -27,7 +27,7 @@ jobs:
           testFilePath: PerformanceScript.jmx
           outputReportsFolder: reports/
           args: "-Juser_count${{ github.action.input.virtual_user }} -Jloop_count${{ github.action.input.loop_count }}  "
-      - uses: actions/download-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           name: jmeter-test-results
           path: reports/
