@@ -24,7 +24,7 @@ jobs:
       - name: Run Jmeter Action on a Test
         uses: rbhadti94/apache-jmeter-action@v0.5.0
         with: 
-          testFilePath: GetRequests.jmx
+          testFilePath: UrunAramaKullaniciGrubu.jmx
           outputReportsFolder: reports/
           args: "-Juser_count${{ github.action.input.virtual_user }} -Jloop_count${{ github.action.input.loop_count }}  "
       - uses: actions/upload-artifact@v4
