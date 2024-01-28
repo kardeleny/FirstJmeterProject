@@ -20,7 +20,7 @@ jobs:
     run_jmeter_test:
       runs-on: ubuntu-latest
       steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Run Jmeter Action on a Test
         uses: rbhadti94/apache-jmeter-action@v0.5.0
         with: 
