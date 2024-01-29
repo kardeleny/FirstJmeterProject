@@ -26,7 +26,7 @@ jobs:
         with: 
           testFilePath: UrunAramaKullaniciGrubu.jmx
           outputReportsFolder: reports/
-          args: "-Juser_count=${{ github.action.input.virtual_user }} -Jramp_up_time=${{ github.action.input.ramp_up_time }} -Jloop_count=${{ github.action.input.loop_count }}"
+          args: "-Juser_count=${{ github.action.input.virtual_user }} -Jramp_up_time=${{ github.action.input.ramp_up_time }} -Jloop_count=${{ github.action.input.loop_count }} "
       - uses: actions/upload-artifact@v3
         with:
           name: jmeter-test-results
